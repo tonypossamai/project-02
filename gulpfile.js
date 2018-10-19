@@ -1,43 +1,79 @@
 // Require Gulp first!
-const gulp = require("gulp");
-// This is a very basic Gulp task,
-// with a name and some code to run
-// when this task is called:
-const uglify = require("gulp-uglify"),
-  rename = require("gulp-rename");
-gulp.task("default", function() {
-  return gulp
-    .src("./js/*.js") // What files do we want gulp to consume?
-    .pipe(uglify()) // Call the uglify function on these files
-    .pipe(rename({ extname: ".min.js" })) // Rename the uglified file
-    .pipe(gulp.dest("./build/js")); // Where do we put the result?
+const gulp = require('gulp'),
+
+  prettyError = require('gulp-prettyerror'),
+  sass = require('gulp-sass'),
+  autoprefixer = require('gulp-autoprefixer'),
+  rename = require('gulp-rename'),
+  cssnano = require('gulp-cssnano'),
+  uglify = require('gulp-uglify'),
+  eslint = require('gulp-eslint');
+  
+  var browserSync = require('browser-sync').create();
+
+// Create basic Gulp tasks
+
+gulp.task('sass', function(done) {
+  gulp
+    .src('./sass/style.scss', { sourcemaps: true })
+    .pipe(prettyError())
+    .pipe(sass())
+    .pipe(
+      autoprefixer({
+        browsers: ['last 2 versions']
+      })
+    )
+    .pipe(gulp.dest('./build/css'))
+    .pipe(cssnano())
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('./build/css'));
+
+  
+  done();
 });
 
-var browserSync = require('browser-sync').create();
+gulp.task('lint', function() {
+  return (gulp
+      .src(['./js/*.js'])
+      // Also need to use it here...
+      .pipe(prettyError())
+      .pipe(eslint())
+      .pipe(eslint.format())
+      .pipe(eslint.failAfterError()) );
+});
 
-// Static server
+gulp.task(
+  'scripts',
+  gulp.series('lint', function() {
+    return gulp
+      .src('./js/*.js')
+      .pipe(uglify())
+      .pipe(
+        rename({
+          extname: '.min.js'
+        })
+      )
+      .pipe(gulp.dest('./build/js'));
+  })
+);
+
+// Set-up BrowserSync and watch
+
 gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
+  browserSync.init({
+    server: {
+      baseDir: './'
+    }
+  });
 
-gulp.watch(['index.html', 'build/css/*.css', 'css/*.css', 'build/js/*.js']).on('change', browserSync.reload);
-
+  gulp
+    .watch(['build/css/*.css', 'build/js/*.js'])
+    .on('change', browserSync.reload);
 });
 
-const eslint = require('gulp-eslint');
- 
-gulp.task('lint', () => {
-    return gulp.src(['./js/*.js'])
-        // eslint() attaches the lint output to the "eslint" property
-        // of the file object so it can be used by other modules.
-        .pipe(eslint())
-        // eslint.format() outputs the lint results to the console.
-        // Alternatively use eslint.formatEach() (see Docs).
-        .pipe(eslint.format())
-        // To have the process exit with an error code (1) on
-        // lint error, return the stream and pipe to failAfterError last.
-        .pipe(eslint.failAfterError());
+gulp.task('watch', function() {
+  gulp.watch('js/*.js', gulp.series('scripts'));
+  gulp.watch('sass/*.scss', gulp.series('sass'));
 });
+
+gulp.task('default', gulp.parallel('browser-sync', 'watch'));
