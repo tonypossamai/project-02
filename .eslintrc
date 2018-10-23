@@ -1,7 +1,9 @@
 {
 "extends": "eslint:recommended",
+"parserOptions": {
+    "ecmaVersion": 2016
+},
     "rules": {
-    // our rules will go here..."rules": {
     "no-alert": 1,
     "camelcase": 1,
     "curly": 1,
@@ -14,7 +16,6 @@
     "quotes": [ 1, "single"]
 },
 "globals": {
-    // any globals we want to allow will go here
     "jQuery": false,
     "$": false
 },

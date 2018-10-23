@@ -1,0 +1,23 @@
+/* BREAKPOINTS */
+
+$desktop-width: 1240px;
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+$tablet-width: 600px;
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+
+}
+
+$mobile-width: 320px;
+@mixin mobile {
+  @media (min-width: $mobile-width) {
+    @content;
+  }
+}
