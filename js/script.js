@@ -6,9 +6,9 @@ $('select').on('change', function(){
     'api-key': 'e3bf7fa9f4c84ef19df635f8634973d4'
     });
 
-    $('.logo').toggleClass('moving-logo'); 
-    $('.section').toggleClass('moving-section'); 
-    $('body').toggleClass('moving-body'); 
+    $('.logo').addClass('moving-logo'); 
+    $('.section').addClass('moving-section'); 
+    $('body').addClass('moving-body'); 
 
 
 
