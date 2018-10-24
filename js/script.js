@@ -10,10 +10,6 @@ $('select').on('change', function(){
     $('.section').addClass('moving-section'); 
     $('body').addClass('moving-body'); 
 
-
-
-
-
     $.ajax({
         url: url,
         method: 'GET',
@@ -31,7 +27,7 @@ $('select').on('change', function(){
         let imageUrl = data.results[i].multimedia[4].url;  
   
         $('#title').append(data.results[i].abstract);
-        $('.container').append('<a href="'+ articleUrl +'" class="articleContainer"><section><h1 class="articleTitle">' + title + '</h1></section></a>');
+        $('.container').append('<a target="_blank" href="'+ articleUrl +'" class="articleContainer"><section><h1 class="articleTitle">' + title + '</h1></section></a>');
         $('.articleContainer').last().css('background-image', 'url('+ imageUrl +')');
     }
   
@@ -39,5 +35,4 @@ $('select').on('change', function(){
     throw err;
   });
 })
-
 });
