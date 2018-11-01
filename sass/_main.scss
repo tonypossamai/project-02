@@ -101,9 +101,6 @@ body {
             transition: 0.5s;
             width: 94%;
         }
-        .articleBox {
-
-        }
     }
 }
 
@@ -141,45 +138,45 @@ body {
 
 @keyframes moving-logo{
     0% {transform: translateY(0px) scale(1);}
-    100% {transform: translate(0px, 250px) scale(0.5);}
+    100% {transform: translate(0px, 220px) scale(0.4);}
 }
 @keyframes moving-section{
     0% {transform: translateY(0px);}
-    100% {transform: translate(0px, 200px);}
+    100% {transform: translate(0px, 160px);}
 }
 @keyframes moving-body{
     0% {transform: translateY(0px);}
-    100% {transform: translateY(-500px);}
+    100% {transform: translateY(-450px);}
 }
 
 /* Tablet Header Animation */
 
 @keyframes moving-logo-tablet{
     0% {transform: translateY(0px) scale(1);}
-    100% {transform: translate(-5px, 300px) scale(0.5);}
+    100% {transform: translate(-5px, 275px) scale(0.5);}
 }
 @keyframes moving-section-tablet{
     0% {transform: translateY(0px);}
-    100% {transform: translate(-50px, 300px);}
+    100% {transform: translate(-50px, 275px);}
 }
 @keyframes moving-body-tablet{
     0% {transform: translateY(0px);}
-    100% {transform: translateY(-600px);}
+    100% {transform: translateY(-550px);}
 }
 
 /* Desktop Header Animation */
 
 @keyframes moving-logo-desktop{
     0% {transform: translateY(0px) scale(1);}
-    100% {transform: translate(-100px, 320px) scale(0.3);}
+    100% {transform: translate(-90px, 300px) scale(0.3);}
 }
 @keyframes moving-section-desktop{
     0% {transform: translateY(0px);}
-    100% {transform: translate(-200px, 320px);}
+    100% {transform: translate(-200px, 300px);}
 }
 @keyframes moving-body-desktop{
     0% {transform: translateY(0px);}
-    100% {transform: translateY(-650px);}
+    100% {transform: translateY(-600px);}
 }
 
 .articleContainer:hover .articleTitle {
