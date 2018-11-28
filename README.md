@@ -67,7 +67,7 @@ I now have a better understanding about the whole process of creating a instanew
 
 ----
 ## Link
-You can check the final result of my project by clicking [here](https://tonypossamai.github.io/project-02/)
+You can check the final result of my project by clicking [here](https://github.com/tonypossamai/NYT-Instanews.git)
 <br>
 <br>
 <br>
