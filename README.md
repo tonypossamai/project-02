@@ -16,30 +16,6 @@ Following the RWD principles, three breakpoints for the website have been create
 <br>
 
 ---
-## Mobile
-<img src="assets/screenshots/mobile-homepage.png">
-<br>
-<img src="assets/screenshots/mobile-news.png">
-<br>
-<br>
-
----
-## Tablet
-<img src="assets/screenshots/tablet-homepage.png">
-<br>
-<img src="assets/screenshots/tablet-news.png">
-<br>
-<br>
-
----
-## Desktop
-<img src="assets/screenshots/desktop-homepage.png">
-<br>
-<img src="assets/screenshots/desktop-news.png">
-<br>
-<br>
-
----
 ## Built with
 
 - HTML5
@@ -67,9 +43,33 @@ I now have a better understanding about the whole process of creating a instanew
 
 ----
 ## Link
-You can check the final result of my project by clicking [here](https://github.com/tonypossamai/NYT-Instanews.git)
+You can check the final result of my project by clicking [here](https://tonypossamai.github.io/NYT-Instanews/)
 <br>
 <br>
 <br>
 <br>
 Thank you!
+
+---
+## Mobile
+<img src="assets/screenshots/mobile-homepage.png">
+<br>
+<img src="assets/screenshots/mobile-news.png">
+<br>
+<br>
+
+---
+## Tablet
+<img src="assets/screenshots/tablet-homepage.png">
+<br>
+<img src="assets/screenshots/tablet-news.png">
+<br>
+<br>
+
+---
+## Desktop
+<img src="assets/screenshots/desktop-homepage.png">
+<br>
+<img src="assets/screenshots/desktop-news.png">
+<br>
+<br>
