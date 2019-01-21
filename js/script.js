@@ -3,7 +3,7 @@ $(document).ready(function() {
 $('select').on('change', function(){
     var url = 'https://api.nytimes.com/svc/topstories/v2/'+$('select').val()+'.json';
     url += '?' + $.param({
-    'api-key': 'Z4Q0RWspjL4d7O2pBfSjdkmRjJZp7WNF'
+    'api-key': 'e3bf7fa9f4c84ef19df635f8634973d4'
     });
 
     $('.logo').addClass('moving-logo'); 
