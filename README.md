@@ -16,30 +16,6 @@ Following the RWD principles, three breakpoints for the website have been create
 <br>
 
 ---
-## Mobile
-<img src="assets/screenshots/mobile-homepage.png">
-<br>
-<img src="assets/screenshots/mobile-news.png">
-<br>
-<br>
-
----
-## Tablet
-<img src="assets/screenshots/tablet-homepage.png">
-<br>
-<img src="assets/screenshots/tablet-news.png">
-<br>
-<br>
-
----
-## Desktop
-<img src="assets/screenshots/desktop-homepage.png">
-<br>
-<img src="assets/screenshots/desktop-news.png">
-<br>
-<br>
-
----
 ## Built with
 
 - HTML5
@@ -73,3 +49,27 @@ You can check the final result of my project by clicking [here](https://tonyposs
 <br>
 <br>
 Thank you!
+
+---
+## Mobile
+<img src="assets/screenshots/mobile-homepage.png">
+<br>
+<img src="assets/screenshots/mobile-news.png">
+<br>
+<br>
+
+---
+## Tablet
+<img src="assets/screenshots/tablet-homepage.png">
+<br>
+<img src="assets/screenshots/tablet-news.png">
+<br>
+<br>
+
+---
+## Desktop
+<img src="assets/screenshots/desktop-homepage.png">
+<br>
+<img src="assets/screenshots/desktop-news.png">
+<br>
+<br>
