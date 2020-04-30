@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "gulp-eslint": "^5.0.0",
-    "jquery": "^3.3.1"
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
